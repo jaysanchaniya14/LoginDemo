@@ -84,6 +84,14 @@
                                 <span class="menu-title">App Users</span>
                             </a>
                         </div>
+                        <div class="menu-item">
+                            <a class="menu-link" href="{{ route('user.userindex') }}">
+                                <span class="menu-bullet">
+                                    <span class="bullet bullet-dot"></span>
+                                </span>
+                                <span class="menu-title"> Users</span>
+                            </a>
+                        </div>
                         @if(auth('admin')->user()->is_master == 1)
                             <div class="menu-item">
                                 <a class="menu-link" href="">

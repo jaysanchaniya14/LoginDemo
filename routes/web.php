@@ -30,12 +30,10 @@ Route::prefix('admin')->middleware('auth:admin')->group(function(){
 
     Route::prefix('/users')->group(function(){
         Route::get('/', [UserController::class, 'index'])->name('user.list');
-        Route::delete('{id}', [UserController::class, 'destroy'])->name('user.delete');
-        Route::post('{id}/change-status', [UserController::class, 'changeStatus'])->name('user.status');
-        Route::get('{id}/sub-projects', [UserController::class, 'subproject'])->name('user.subproject');
-        Route::get('{id}', [UserController::class, 'view'])->name('user.view');
-        Route::get('{id}/view-sub-projects', [UserController::class, 'viewsubproject'])->name('user.viewsubproject');
-        Route::get('{id}/view-donation', [UserController::class, 'viewdonation'])->name('user.viewdonation');
+
+
+        Route::get('usersindex', [UserController::class, 'userindex'])->name('user.userindex');
+
     });
 
 });
